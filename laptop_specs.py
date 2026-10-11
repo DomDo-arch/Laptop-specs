@@ -9,8 +9,10 @@ laptop_json = pd.DataFrame(laptop_json)
 
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
 
-st.slider(1,2)
-st.write(laptop_json["ram"])
+min_price = min(laptop_json["price"])
+max_price = max(laptop_json["price"])
+
+st.slider(min_price, max_price)
 
 if __name__ == "__main__":
 
