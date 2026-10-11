@@ -11,7 +11,7 @@ laptop_json["price"] = laptop_json["price"].astype(int)
 
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
 
-dynamic_filters = dynamic_filters[dynamic_filters["price"]>200]
+
 
 if __name__ == "__main__":
 
@@ -19,3 +19,6 @@ if __name__ == "__main__":
 	st.number_input("price", min_value=0, max_value=max(laptop_json["price"]))
 	
 	dynamic_filters.display_df()
+
+	filtered_df = dynamic_filters.filter_df()
+	st.write(filtered_df)
