@@ -4,7 +4,7 @@ from streamlit_dynamic_filters import DynamicFilters
 import pandas as pd
 
 # Table of column stats
-laptop_json = st.secrets["laptop_json"]
+laptop_json = st.secrets["phone_json"]
 laptop_json = pd.DataFrame(laptop_json)
 laptop_json = laptop_json.sort_values("model", ascending=True)
 
