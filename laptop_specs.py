@@ -9,7 +9,7 @@ import pandas as pd
 laptop_json = st.secrets["laptop_json"]
 laptop_json = pd.DataFrame(laptop_json)
 
-dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory"])#, "price_range"])
+dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display", "price"])#, "price_range"])
 
 if __name__ == "__main__":
 
