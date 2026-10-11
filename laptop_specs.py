@@ -6,7 +6,7 @@ import pandas as pd
 # Table of column stats
 laptop_json = st.secrets["laptop_json"]
 laptop_json = pd.DataFrame(laptop_json)
-df.sort_values("model")
+laptop_json.sort_values("model")
 
 laptop_json["price"] = laptop_json["price"].astype(int)
 
