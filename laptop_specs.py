@@ -15,7 +15,7 @@ st.slider(min(laptop_json["price"]), max(laptop_json["price"]))
 
 st.write(min(laptop_json["price"]))
 
-st.number_input()
+st.number_input("price", min_value=0, max_value=max(laptop_json["price"]))
 
 if __name__ == "__main__":
 
