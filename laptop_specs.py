@@ -15,7 +15,9 @@ st.write(st.secrets["db_json"])
 
 #st.write(df1)
 
-st.write(type(st.secrets["db_json"]))
+json = st.secrets["db_json"]
+st.write(pd.DataFrame(json.items()))
+
 
 if __name__ == "__main__":
 
