@@ -3,7 +3,7 @@ from streamlit_dynamic_filters import DynamicFilters
 
 import pandas as pd
 
-st.segmented_control("Device", ["Phone", "Laptop"])
+st.segmented_control("Device", ["Phone", "Laptop"], default = "Phone")
 
 # Table of column stats
 laptop_json = st.secrets["phone_json"]
