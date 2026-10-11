@@ -23,13 +23,13 @@ if __name__ == "__main__":
 	dynamic_filters.display_filters(num_columns = 2, gap = "large", location = "columns")
 	price = st.number_input("Min price", min_value=0, max_value=max(laptop_json["price"]))
 	if device == "Phone":
-		battery = st.number_input("Select battery", min_value=0, max_value=max(laptop_json["price"].astype(int)))
+		battery = st.number_input("Select battery", min_value=0, max_value=max(laptop_json["battery(mAh)"].astype(int)))
 	else:
 		battery = st.number_input("Select battery", min_value=0, max_value=100)
 	
 	#dynamic_filters.display_df()
 	
 	filtered_df = dynamic_filters.filter_df()
-	df1 = filtered_df[filtered_df["price"]>=price]
+	df1 = filtered_df[filtered_df["price"]>=price & filtered_df["battery(mAh)"]>=battery]
 	
 	st.write(df1)
