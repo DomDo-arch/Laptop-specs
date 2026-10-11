@@ -10,7 +10,6 @@ laptop_json = pd.DataFrame(laptop_json)
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
 
 #st.slider(min_price, max_price)
-st.write(min_price, max_price)
 
 prices = []
 for i in laptop_json["price"]:
