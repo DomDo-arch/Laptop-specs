@@ -11,6 +11,10 @@ dynamic_filters = DynamicFilters(df = df, filters = ["cpu", "gpu", "ram", "memor
 st.write(st.secrets["db_password"])
 st.write(st.secrets["db_json"])
 
+df1 = pd.read_json(st.secrets["db_json"])
+
+st.write(df1)
+
 if __name__ == "__main__":
 
 	dynamic_filters.display_filters()
