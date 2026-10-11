@@ -12,7 +12,8 @@ dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram
 min_price = min(laptop_json["price"])
 max_price = max(laptop_json["price"])
 
-st.slider(min_price, max_price)
+#st.slider(min_price, max_price)
+st.write(min_price, max_price)
 
 if __name__ == "__main__":
 
