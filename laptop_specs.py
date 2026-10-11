@@ -30,6 +30,6 @@ if __name__ == "__main__":
 	#dynamic_filters.display_df()
 	
 	filtered_df = dynamic_filters.filter_df()
-	df1 = filtered_df[filtered_df["price"]>=price & filtered_df["battery(mAh)"]>=battery]
+	df1 = filtered_df[filtered_df["price"]>=price]
 	
 	st.write(df1)
