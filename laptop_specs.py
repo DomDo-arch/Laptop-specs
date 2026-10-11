@@ -7,6 +7,7 @@ import pandas as pd
 
 # Table of column stats
 laptop_json = st.secrets["laptop_json"]
+laptop_json = pd.DataFrame(laptop_json)
 
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory"])#, "price_range"])
 
