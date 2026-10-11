@@ -7,7 +7,7 @@ cpu_col, gpu_col = [], []
 
 df = pd.read_csv("laptops_20.csv")
 
-dynamic_filters = DynamicFilters(df = df, filters = ["cpu", "gpu", "ram", "memory", "price_range"])
+dynamic_filters = DynamicFilters(df = df, filters = ["cpu", "gpu", "ram", "memory"]#, "price_range"])
 
 # Table of column stats
 from collections import Counter
