@@ -11,6 +11,8 @@ laptop_json["price"] = laptop_json["price"].astype(int)
 
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
 
+dynamic_filters = dynamic_filters[dynamic_filters["price"]>200]
+
 if __name__ == "__main__":
 
 	dynamic_filters.display_filters()
