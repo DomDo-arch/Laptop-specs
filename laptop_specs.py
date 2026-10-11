@@ -18,7 +18,7 @@ st.write(st.secrets["db_json"])
 json = st.secrets["db_json"]
 st.write(pd.DataFrame(json.items()))
 laptop_json = st.secrets["laptop_json"]
-st.write(pd.DataFrame(laptop_json.items()))
+st.write(pd.DataFrame(laptop_json))
 
 
 if __name__ == "__main__":
