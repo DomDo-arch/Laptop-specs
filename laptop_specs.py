@@ -8,7 +8,7 @@ df = pd.read_csv("laptops_20.csv")
 dynamic_filters = DynamicFilters(df = df, filters = ["cpu", "gpu", "ram", "memory"])#, "price_range"])
 
 # Table of column stats
-st.write(st.secrets["db_pass"])
+st.write(st.secrets["db_password"])
 
 if __name__ == "__main__":
 
