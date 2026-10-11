@@ -3,8 +3,6 @@ from streamlit_dynamic_filters import DynamicFilters
 
 import pandas as pd
 
-#df = pd.read_csv("laptops_20.csv")
-
 # Table of column stats
 laptop_json = st.secrets["laptop_json"]
 laptop_json = pd.DataFrame(laptop_json)
@@ -15,5 +13,3 @@ if __name__ == "__main__":
 
 	dynamic_filters.display_filters()
 	dynamic_filters.display_df()
-	
-	#st.write((cpu_count))
