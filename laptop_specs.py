@@ -23,7 +23,7 @@ if __name__ == "__main__":
 	dynamic_filters.display_filters(num_columns = 2, gap = "large", location = "columns")
 	price = st.number_input("Min price", min_value=0, max_value=max(laptop_json["price"]))
 	if device == "Phone":
-		battery = st.number_input("Select battery", min_value=0, max_value=100)
+		battery = st.number_input("Select battery", min_value=0, max_value=max(laptop_json["price"].astype(int)))
 	else:
 		battery = st.number_input("Select battery", min_value=0, max_value=100)
 	
