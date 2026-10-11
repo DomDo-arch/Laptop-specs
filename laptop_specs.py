@@ -8,7 +8,7 @@ laptop_json = st.secrets["phone_json"]
 laptop_json = pd.DataFrame(laptop_json)
 laptop_json = laptop_json.sort_values("model", ascending=True)
 
-#laptop_json["price"] = laptop_json["price"].astype(int)
+laptop_json["price"] = laptop_json["price"].str.replace("-","")#.astype(int)
 
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])
 
