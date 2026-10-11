@@ -14,6 +14,7 @@ max_price = sorted(laptop_json["price"])[len(laptop_json["price"])-1]
 
 #st.slider(min_price, max_price)
 st.write(min_price, max_price)
+st.write(sorted(laptop_json["price"]))
 
 if __name__ == "__main__":
 
