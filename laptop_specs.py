@@ -15,7 +15,7 @@ dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram
 if __name__ == "__main__":
 
 	dynamic_filters.display_filters()
-	price = st.number_input("price", min_value=0, max_value=max(laptop_json["price"]))
+	price = st.number_input("Min price", min_value=0, max_value=max(laptop_json["price"]))
 	
 	#dynamic_filters.display_df()
 	
