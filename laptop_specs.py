@@ -9,12 +9,11 @@ laptop_json = pd.DataFrame(laptop_json)
 
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
 
-min_price = min(laptop_json["price"])
-max_price = max(laptop_json["price"])
+min_price = sorted(laptop_json["price"])[0]
+max_price = sorted(laptop_json["price"])[len(laptop_json["price"])-1]
 
 #st.slider(min_price, max_price)
 st.write(min_price, max_price)
-st.write(laptop_json["price"])
 
 if __name__ == "__main__":
 
