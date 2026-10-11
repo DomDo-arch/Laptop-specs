@@ -3,10 +3,14 @@ from streamlit_dynamic_filters import DynamicFilters
 
 import pandas as pd
 
-st.segmented_control("Device", ["Phone", "Laptop"], default = "Phone")
+device = st.segmented_control("Device", ["Phone", "Laptop"], default = "Phone")
 
 # Table of column stats
-laptop_json = st.secrets["phone_json"]
+if device == "Phone":
+	laptop_json = st.secrets["phone_json"]
+else:
+	laptop_json = st.secrets["laptop_json"]
+
 laptop_json = pd.DataFrame(laptop_json)
 laptop_json = laptop_json.sort_values("model", ascending=True)
 
