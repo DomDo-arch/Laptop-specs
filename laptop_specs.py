@@ -21,5 +21,5 @@ if __name__ == "__main__":
 	dynamic_filters.display_df()
 
 	filtered_df = dynamic_filters.filter_df()
-	df1 = filtered_df[filtered_df["price"]]
+	df1 = filtered_df[filtered_df["price"]>=200]
 	st.write(df1)
