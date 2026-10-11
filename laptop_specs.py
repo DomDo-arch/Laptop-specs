@@ -10,7 +10,7 @@ laptop_json = pd.DataFrame(laptop_json)
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
 
 st.slider(1,2)
-st.write(dynamic_filters.ram)
+st.write(laptop_json["ram"])
 
 if __name__ == "__main__":
 
