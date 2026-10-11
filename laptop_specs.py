@@ -15,6 +15,8 @@ st.slider(min(laptop_json["price"]), max(laptop_json["price"]))
 
 st.write(min(laptop_json["price"]))
 
+st.number_input()
+
 if __name__ == "__main__":
 
 	dynamic_filters.display_filters()
