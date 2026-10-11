@@ -11,15 +11,15 @@ dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram
 
 #st.slider(min_price, max_price)
 
-prices = []
-for i in laptop_json["price"]:
-	prices.append(i.replace(",",""))
+#prices = []
+#for i in laptop_json["price"]:
+	#prices.append(i.replace(",",""))
 	
-min_price = min(prices)
-max_price = max(prices)
+#min_price = min(prices)
+#max_price = max(prices)
 
-st.write(min_price, max_price)
-st.write(sorted(prices)[0])
+#st.write(min_price, max_price)
+#st.write(sorted(prices)[0])
 
 
 if __name__ == "__main__":
