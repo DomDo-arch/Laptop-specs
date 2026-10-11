@@ -7,7 +7,7 @@ import pandas as pd
 laptop_json = st.secrets["laptop_json"]
 laptop_json = pd.DataFrame(laptop_json)
 
-laptop_json["price"] = df["price"].astype(int)
+laptop_json["price"] = laptop_json["price"].astype(int)
 
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
 
