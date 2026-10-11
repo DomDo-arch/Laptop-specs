@@ -26,7 +26,7 @@ if __name__ == "__main__":
 	
 	if device == "Phone":
 		battery = st.number_input("Select battery", min_value=0, max_value=max(laptop_json["battery(mAh)"].astype(int)))
-		df1 = filtered_df[filtered_df["price"]>=price & filtered_df["battery(mAh)">=battery]]
+		df1 = filtered_df[filtered_df["price"]>=price & filtered_df["battery(mAh)"]>=battery]
 	else:
 		battery = st.number_input("Select battery", min_value=0, max_value=100)
 	
