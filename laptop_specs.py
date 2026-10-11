@@ -16,7 +16,7 @@ max_price = sorted(laptop_json["price"])[len(laptop_json["price"])-1]
 st.write(min_price, max_price)
 
 for i in laptop_json["price"]:
-	st.write(i)
+	st.write(i.replace(",",""))
 
 if __name__ == "__main__":
 
