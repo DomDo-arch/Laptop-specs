@@ -10,8 +10,7 @@ laptop_json = laptop_json.sort_values("model", ascending=True)
 
 laptop_json["price"] = laptop_json["price"].astype(int)
 
-dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
-
+dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])
 
 if __name__ == "__main__":
 
@@ -22,7 +21,5 @@ if __name__ == "__main__":
 	
 	filtered_df = dynamic_filters.filter_df()
 	df1 = filtered_df[filtered_df["price"]>=price]
-
-	filtered_df = dynamic_filters.display_df()
 	
 	st.write(df1)
