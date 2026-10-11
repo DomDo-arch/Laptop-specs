@@ -19,6 +19,7 @@ min_price = min(prices)
 max_price = max(prices)
 
 st.write(min_price, max_price)
+st.write(prices)
 
 
 if __name__ == "__main__":
