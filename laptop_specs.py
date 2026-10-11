@@ -5,7 +5,7 @@ import pandas as pd
  
 cpu_col, gpu_col = [], []
 
-df = pd.read_csv("laptops_100.csv")
+df = pd.read_csv("laptops_20.csv")
 
 dynamic_filters = DynamicFilters(df = df, filters = ["cpu", "gpu", "ram", "memory", "price_range"])
 
