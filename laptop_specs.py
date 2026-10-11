@@ -9,7 +9,7 @@ dynamic_filters = DynamicFilters(df = df, filters = ["cpu", "gpu", "ram", "memor
 
 # Table of column stats
 st.write(st.secrets["db_password"])
-st.write(st.secrets["db_credentials"]["db_json"])
+st.write(st.secrets["db_json"])
 
 #df1 = pd.read_json(st.secrets["db_json"])
 
