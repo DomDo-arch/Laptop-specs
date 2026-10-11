@@ -9,6 +9,8 @@ laptop_json = pd.DataFrame(laptop_json)
 
 dynamic_filters = DynamicFilters(df = laptop_json, filters = ["cpu", "gpu", "ram", "memory", "display"])#, "price_range"])
 
+st.slider(1,2)
+
 if __name__ == "__main__":
 
 	dynamic_filters.display_filters()
