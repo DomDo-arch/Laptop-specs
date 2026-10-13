@@ -29,9 +29,9 @@ if __name__ == "__main__":
 		df1 = filtered_df[filtered_df["price"]>=price]
 		df1 = df1[(df1["battery(mAh)"]).astype(int)>=battery]
 	else:
-		battery = st.number_input("Select battery", min_value=0, max_value=int(float(max(laptop_json["battery(Wh)"])))+2)
+		#battery = st.number_input("Select battery", min_value=0, max_value=int(float(max(laptop_json["battery(Wh)"])))+2)
 		df1 = filtered_df[filtered_df["price"]>=price]
-		df1 = df1[(df1["battery(Wh)"]).astype(float)>=battery]
+		#df1 = df1[(df1["battery(Wh)"]).astype(float)>=battery]
 	
 	#dynamic_filters.display_df()
 	
