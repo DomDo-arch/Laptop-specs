@@ -3,7 +3,7 @@ from streamlit_dynamic_filters import DynamicFilters
 
 import pandas as pd
 
-device = st.segmented_control("Device", ["Phone", "Tablet", "Laptop"], default = "Phone")
+device = st.segmented_control("Device", ["Phone", "Laptop"], default = "Phone")
 
 # Table of column stats
 if device == "Phone":
